@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <span id="firstNameError" class="error"></span>
+        <br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        <span id="lastNameError" class="error"></span>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span>
+        <br>
+
+        <label for="telephone">Telephone Number:</label>
+        <input type="text" id="telephone" name="telephone">
+        <span id="telephoneError" class="error"></span>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            // Get form inputs
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var telephone = document.getElementById('telephone').value;
+
+            // Reset error messages
+            document.getElementById('firstNameError').innerHTML = "";
+            document.getElementById('lastNameError').innerHTML = "";
+            document.getElementById('emailError').innerHTML = "";
+            document.getElementById('telephoneError').innerHTML = "";
+
+            // Validate First Name
+            if (firstName === "") {
+                document.getElementById('firstNameError').innerHTML = "Please enter your First Name";
+                return false;
+            }
+
+            // Validate Last Name
+            if (lastName === "") {
+                document.getElementById('lastNameError').innerHTML = "Please enter your Last Name";
+                return false;
+            }
+
+            // Validate Email
+            if (email === "") {
+                document.getElementById('emailError').innerHTML = "Please enter your Email";
+                return false;
+            }
+
+            // Validate Telephone Number
+            if (telephone === "") {
+                document.getElementById('telephoneError').innerHTML = "Please enter your Telephone Number";
+                return false;
+            }
+
+            // You can add more complex validation for email and telephone if needed
+
+            return true; // Form is valid
+        }
+    </script>
+
+</body>
+
+</html>

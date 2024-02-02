@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    /* scroll-behavior: smooth; */
+    border: none;
+    outline: none;
+}
+
+:root {
+    --bg-color: #191919;
+    --second-bg-color: #101010;
+    --main-color: #e9204f;
+    --text-color: #fff;
+    --second-color: #e4e4e4;
+    --other-color: #c6c9d8bf;
+    --h1-font: 4rem;
+    --h2-font: 3.5rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 11%;
+    border-bottom: 1px solid transparent;
+    transition: all ease 0.50s;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 40px;
+    transition: all ease 0.40s;
+}
+
+.navlist a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 199px 19% 100px;
+}
+
+.Home {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url(./image/back.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.text h3 {
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    word-spacing: 10px;
+}
+
+.text h1 {
+    font-family: sans-serif;
+    font-size: var(--h1-font);
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.text h4 {
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 15px;
+    margin-bottom: 3.5rem;
+}
+
+.bw {
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: all ease 0.50s;
+}
+
+.bw:hover {
+    transform: translateX(5px);
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+
+
+/* hhh */
+
+table tr td {
+    vertical-align: middle;
+}
+
+td button {
+    margin: 5px;
+}
+
+td button i {
+    font-size: 14px;
+}
+
+.modal-content {
+    background: var(--bg-color);
+}
+
+.modal-header {
+    background: #0d6efd;
+    color: var(--bg-color);
+}
+
+.modal-body form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.modal-body form .imgholder {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imgholder .upload {
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload i {
+    color: var(--bg-color);
+    font-size: 35px;
+}
+
+.imgholder:hover .upload {
+    display: flex;
+}
+
+.imgholder .upload input {
+    display: none;
+}
+
+.modal-body form .inputField {
+    flex-basis: 68%;
+    border-left: 5px groove blue;
+    padding-left: 20px;
+}
+
+form .inputField>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form .inputField>div label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#userForm form .inputField>div label::after {
+    content: "*";
+    color: red;
+}
+
+form .inputField>div select,
+form .inputField>div input {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid blue;
+    /* Corrected missing unit (px) */
+}
+
+.modal-footer .submit {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+#readData form .inputField input {
+    color: #000;
+    font-size: 18px;
+}
